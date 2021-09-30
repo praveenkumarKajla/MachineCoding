@@ -1,0 +1,9 @@
+*.md
+package-lock.json
+package.json
+Dockerfile
+logrotate/ivory
+*.md
+*.sh
+*.yml
+*.yaml

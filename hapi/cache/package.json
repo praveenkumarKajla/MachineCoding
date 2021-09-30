@@ -1,0 +1,17 @@
+{
+  "name": "cache",
+  "version": "1.0.0",
+  "description": "locking based inMemory cache",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "praveenkumarkajla",
+  "license": "ISC",
+  "dependencies": {
+    "async-mutex": "^0.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.2"
+  }
+}

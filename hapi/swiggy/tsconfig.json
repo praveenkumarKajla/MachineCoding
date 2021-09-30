@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext"
+    ],
+    "target": "es5",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "preserveConstEnums": false,
+    "baseUrl": "./src",
+    "paths": {
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@errors/*": [
+        "errors/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@models/*": [
+        "models/*"
+      ],
+      "@api/*": [
+        "api/*"
+      ],
+      "@helpers/*": [
+        "helpers/*"
+      ],
+      "@typeroot/*": [
+        "typeroot/*"
+      ],
+      "@components/*": [
+        "api/components/*"
+      ],
+      "*": [
+        "node_modules/*",
+        "src/types/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
