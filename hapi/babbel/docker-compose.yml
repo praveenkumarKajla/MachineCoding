@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "35432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: babbel
+  
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - "5050:80"
+
+  web:
+    image: "node:alpine"
+    entrypoint:
+      - "sh"
+      - "-c"
+      - "npm install && npm run dev "
+    working_dir: "/usr/src/app"
+    environment:
+      DATABASE_URL: postgres://user:password@postgres:5432/babbel
+    ports:
+      - "80:80"
+    depends_on:
+      - postgres
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
