@@ -25,7 +25,7 @@ services:
     entrypoint:
       - "sh"
       - "-c"
-      - "npm install && npm run dev "
+      - "npm install && npm run startDocker "
     working_dir: "/usr/src/app"
     environment:
       DATABASE_URL: postgres://user:password@postgres:5432/babbel

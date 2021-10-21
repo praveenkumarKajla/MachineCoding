@@ -6,6 +6,7 @@
   "scripts": {
     "test": "POSTGRES_DB=test_db docker-compose  up postgres  & (sleep 2 && (lab --sourcemaps --transform node_modules/lab-transform-typescript))",
     "dev": "docker-compose up postgres & (sleep 2 && (tsc & tsc -w & nodemon -q)) ",
+    "startDocker": "tsc & tsc -w & nodemon -q",
     "start": "npm run build && npm run serve",
     "serve": "node dist/index.js",
     "build": " npm run build-ts",
