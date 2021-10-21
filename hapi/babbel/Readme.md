@@ -27,5 +27,6 @@ For testing run below command
 $ npm run test
 ```
 
+You can find the api documentation here  [POSTMAN COLLECTION](https://documenter.getpostman.com/view/12106022/UV5ZCwuT).
 
 HAPPY CODING
